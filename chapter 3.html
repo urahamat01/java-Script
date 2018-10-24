@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script language="javascript">
+var onlyGlobal="This variable is only global"
+var localGlobal='I\'m global now!"'
+function showMe(){
+	var localGlobal="I\'m now local";
+	var onlyLocal="Only works on the local level."
+	alert(localGlobal+ "--" +onlyLocal);
+}
+showMe ();
+document.write(onlyGlobal+"<p>"+localGlobal);
+alert(onlyGlobal);
+</script>
+
+</head>
+
+<body bgcolor=#CadDad>
+
+
+
+</body>
+</html>
