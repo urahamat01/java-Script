@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+h2{font-size:18pt;
+color:#e8b002;
+font-family:verdana;
+	}
+	.clickNote{
+		font-size:12pt;
+		font-weight:bold;
+		color:#e8b002;
+		background:black;
+		font-family:verdana;
+		
+		}
+
+</style>
+<script>
+function dolt(){
+	window.document.petstore.puppy.value="Swissy";
+	window.document.petstore.clicker.value="I\'ve been clicked";
+	
+	
+	}
+</script>
+
+</head>
+
+<body bgcolor="#FFFFCC" onLoad="javascript:window.document.petstore.rest()">
+<h2>object hierarchy partice</h2>
+<span class="clickNote">&nbsp Click the button: &nbsp</span>
+<forn name="petstore">
+<input type=text name="puppy">
+
+<input type="button" name="clicker" value="click to change value of text window."
+onClick="doIt()">
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/csss">
+h2{
+	font-size:12pt;
+	color:#e8b002;
+	font-family:verdana;	
+	}
+.outText{
+	font-size:12pt;
+	color:#e8b002;
+	font-family:verdana;	
+	}
+
+
+</style>
+<script language="javascript">
+function showScreen(){
+	var display="<h2>You screen has the following characteristics:</h2><div class=outText><b><br>";
+	var screenSee=new Array(5);
+	sereenSee[o]="Available screen height="+screen.availHeight;
+	sereenSee[1]="Available screen height="+screen.availHeight;
+	sereenSee[2]="You have"+(screen.colorDepth)+"bit color.";
+	sereenSee[3]="your screen is"+screen.height+"pixels hight";
+	sereenSee[4]="and"+screen.width+"pxels wide.";
+	for(var counter=0;counter<screenSee.length;counter++){
+		display+=screenSee[counter]+"<br>";
+		
+		}
+	display+="<br></b></div>"
+	document.write(display);	
+	}
+	showScreen();
+</script>
+</head>
+
+<body bgcolor="#fbf4ed">
+</body>
+</html>

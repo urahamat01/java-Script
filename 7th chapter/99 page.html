@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/csss">
+h2{
+	font-size:12pt;
+	color:#e8b002;
+	font-family:verdana;	
+	}
+h3{
+	font-size:12pt;
+	color:#e8b002;
+	font-family:verdana;	
+	}
+
+
+</style>
+<script>
+var acme=new Object();
+acme.mamagement="Management coordinates everything.";//part of the acme object.
+acme,manatement =new opject();//creating new object
+acme.management.rand="Research and Development works to develop new and better products and services.";
+acme.finance="Finance keeps track of the money.";
+acme.production ="Production mades the stuff.";
+acme.marketing="Marketing develops strategies to target markets for the products.";
+acme.marketing=new Object();
+acme.marketing.sales="Sales contacts potential clients and sells the product.";
+acme.fulfillment="Fulfillment delivers sold products.";
+var display="<h2>Firs the properties of the acme object</h2>";
+for(var counter in acme){
+	display+=counter+"<br>";
+	}
+	display+="<h3> And the value of the proprties of mansagement and marketing</h3>";
+	display+=acme.mannagement.rand+"<br>";
+	disply+=acme.marketing.sales;
+	document.write(display);
+</script>
+
+</head>
+
+<body bgcolor="#FFFFCC">
+
+
+
+</body>
+</html>

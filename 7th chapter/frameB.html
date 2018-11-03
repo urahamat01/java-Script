@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link rel="stylesheet"href="winProp.css">
+<script language="javascript">
+var display="<h3>"+self.name+"</h3>";
+display+="<div class='bod'>";
+var gone="";
+var alpha=self.closed;
+if(alpha==false){
+	var gone="naver";
+	
+	}
+	display+="this window has"+gone+"been closed.<br>";
+	//change
+	self.defaultStatus="\"This window property can be changed.\"";
+	display +="The default status reads:"+self.defaultStatus+"<br></div>";
+	document.write(display);
+
+</script>
+</head>
+
+<body bgcolor="#c6d699">
+<p>
+<a href="dummy.html">GO Dummy</a>
+</body>
+</html>

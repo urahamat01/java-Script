@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script language="javascript">
+var recordIt=0;
+function moveIt(){
+	recordIt+=1;
+	document.viewer.spot.value="recordIt";
+}
+
+
+	
+</script>
+</head>
+
+<body bgcolor="#CCCC33">
+<center>
+<p>
+<h2>How many mouse moves?</h2>
+<form name="view">
+<input type="type" name="spot"size=3>
+
+</form>
+<a href=javascript:void onMouseMove="moveIt()">Tickle this spot</a>
+
+</body>
+</html>

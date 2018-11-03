@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script language="javascript">
+
+var capUp=new Image(0);
+cupUp.src="images.jpg";
+var cupDown=new Image();
+cupDown.src="index.jpg";
+var alpha;//this vareavle need to be global
+function interval(){
+	alpha=window.setInterval("document.cup.src=cupDown.src=cupDown.src",3000);
+	
+	}
+	function timeOut(){
+		alpha=window.setTimeout("document.cup.src=cupUP.src",5000);
+		window.clearInterval(alpha);
+		
+		
+		}
+
+
+
+
+</script>
+
+</head>
+
+<body>
+<table cellpadding="0" cellspacing="0"border="0" width="100%"height="100%"align="Center">
+<tr valign="="Middle">
+<td align="Center"><img name="cup"src="images.jpg"alt="java"width="64"height="38"><p>
+<a href="#"onClick="interval(2)">interval</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#"onClick="timeOut(1)">Time Out</a>
+</td>
+</tr>
+</table>
+
+
+
+
+</body>
+</html>
