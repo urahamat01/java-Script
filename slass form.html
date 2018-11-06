@@ -1,0 +1,76 @@
+<!doctype>
+<html>
+<head>
+<title>hello would</title>
+<style>
+labdl{
+width:10;
+height:5;
+
+
+}
+
+
+</style>
+
+
+</head>
+<body>
+<form name="myform">
+name:<input type="text" name="name">
+<labdl id="fname"></labdl><br>
+name:<input type="checkbox" name="gender">mail
+<input type="checkbox" name="gender">femail
+<labdl id="gender"></labdl><br>
+
+<button onClick="validationForm">submit</button>
+<button onClick="closeWindow">close</button>
+
+</form>
+<script>
+var win;
+function closeWindow(){
+win.close=();
+}
+//name id
+function validationForm(){
+var name = document.forms["myform"]["name"].value;
+var gender = document.forms["myform"]["gender"].value;
+//validationForm//
+if(name==""){
+document.getElementById("fname").innerHTML="TELL ME YOY NAME";
+return false;
+
+}
+else{
+
+document.getElementById("fname").innerHTML="";
+}
+if(gender==""){
+document.getElementById("gender").innerHTML="TELL ME YOu gender";
+return false;
+
+}
+else{
+
+document.getElementById("gender").innerHTML="";
+
+window=window.open("","","width=300")
+win.document.write("<h2><center>output form</center></h2>")
+win.document.write("NAME:"+name+"<br>")
+win.document.write("gender"+gender+"<br>")
+
+}
+
+
+
+
+
+}
+</script>
+
+
+</body>
+
+
+</html>

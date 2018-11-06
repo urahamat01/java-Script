@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h1>Validation Form</h>
+<form name="myForm">
+            Name: <input type="text" name="fname"><label id="fnamex"></label><br/>
+
+            Gender:<input type="radio" name="gender" value="Male" />Male
+            <input type="radio" name="gender" value="Female"/>Female
+            <label id="gender"></label><br/>
+
+            Education<input type="checkbox" name="ssc" value="Ssc" />SSC
+            <input type="checkbox" name="hsc" value="Hsc"/>HSC
+            <label id="education"></label><br/>
+
+            Round<select name="round">
+                <option value="Select A Round" selected="selected">Select A Round</option>
+                <option value="Round 36">Round-36</option>
+                <option value="Round 37">Round-37</option>
+                <option value="Round 38">Round-38</option>
+            </select>
+            <label id="round"></label><br/>
+
+            <textarea rows="5" cols="20" name="msg" placeholder="Enter At least 10 Characters"></textarea>
+            <label id="msg"></label><br/>
+
+            <input type="reset" value="Reset">
+        </form>
+
+        <button onClick="validateForm()">Submit</button>
+        <button onClick="closeWindow()">Clse window</button>
+<script>
+var win;
+	function closeWindow(){
+		
+		win.close();
+		}
+		///name: deleration//
+		function validationForm(){
+			var fname=document.forms["myForm"]["fname"].value
+			var gender=document.forms["myForm"]["gender"].value
+			var eaducation="";
+			if(document.forms["myForm"].ssc.checked){
+				education+=document.forms["myForm"]["ssc"].value
+				
+				}
+				if(document.forms["myForm"].hsc.checked){
+				education+=document.forms["myForm"]["hsc"].value
+				
+				}
+		var round=document.forms["myForm"]["round"].value
+		var mag=document.forms["myForm"]["mag"].value
+			////validation form name////
+			if(fname==""){
+				document.getElementById("fnamex").innerHTML="tell me you name";
+				return false;
+				
+				}
+				else if(fname.length<3){
+				document.getElementById("fnamex").innerHTML="tell me you name";
+				return false;
+				
+				}
+				else{
+					document.getElementById("fnamex").innerHTML="";
+					}
+			if(gender==""){
+				document.getElementById("gender").innerHTML="tell me you name";
+				return false;
+				
+				}
+				else{
+					document.getElementById("gender").innerHTML="";
+					}
+					
+			if(!document.forms["myForm"].ssc.checked && !document.forms["myForm"].hsc.checked){
+				document.getElementById("education").innerHTML="tell me you name";
+				return false;
+				
+				}
+				else{
+					document.getElementById("education").innerHTML="";
+					}
+					if(round=""){
+						document.getElementById("round").innerHTML="tell me you round";
+				return false;
+				
+						
+						}
+						else{
+					document.getElementById("round").innerHTML="";
+					}
+					if(msg=""){
+						document.getElementById("msg").innerHTML="tell me you round";
+				return false;
+				
+						
+						}
+						else{
+					document.getElementById("msg").innerHTML="";
+					
+					//open new window
+					win=window.open("","","width=400");
+					win.document.write("<h2><center>form output</center></h2>");
+					win.document.write("NAME:"+fname+"<br>");
+					win.document.write("GENDER:"+gender+"<br>");
+					win.document.write("EDUCATION:"+education+"<br>");
+					win.document.write("ROUND:"+round+"<br>");
+					win.document.write("COMMENT:"+msg+"<br>");
+					}
+					
+		
+			
+			
+			
+			}
+
+
+
+</script>
+
+
+</form>
+
+</body>
+</html>

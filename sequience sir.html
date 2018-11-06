@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+var i;
+var fid ={}; // initialize
+fid[0]=0;
+fid[1]=1;
+for(i=2;i<=10;i++)
+{
+	//next fidonacci number =pervious+one beofore previous
+	//translated to javaScript
+	fid[i]=fid[i-2]+fid[i-1];
+	document.write(fid[i]+"<br>");
+	
+	
+	
+	}
+
+
+</script>
+</body>
+</html>

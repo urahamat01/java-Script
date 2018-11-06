@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form action="" method="get" name="form">
+Name:
+<input name="name" type="text"><label id="fname"></label><br>
+Gender:
+<input name="gender" type="radio"value="mail">Mail
+<input name="gender" type="radio" value="femail">Femail
+<label id="gender"></label><br>
+Education:
+<input name="bbs" type="checkbox">BBS
+<input name="java" type="checkbox">JAVA
+
+<label id="education"></label><br>
+Round:
+<select name="round">
+<option>Round 38</option>
+<option>Round 39</option>
+<option>Round 40</option>
+<label id="round"></label>
+
+</select><br>
+<label>Comment:</label><br>
+<textarea name="msg"cols="30" rows="7"></textarea>
+
+
+<label id="msg"></label><br>
+
+
+
+
+</form>
+<button oclick="validateForm()">Submit</button>
+<button oclick="closeWindow()">Reset</button>
+<script>
+var win;
+function closeWindow(){
+	win.close();
+	
+	
+	}
+	function validateForm(){
+	//name//
+	var name=document.forms["form"]["name"].value;
+	var gender=document.forms["form"]["fname"].value;
+	var education="";
+	
+	if(document.forms["form"].bbs.checked)
+	{education+=document.forms["form"]["bbs"].value;
+	}
+	if(document.forms["form"].java.checked)
+	{education+=","+document.forms["form"]["java"].value;
+	}
+	var round=document.forms["form"]["round"].value;
+	var msg=document.forms["form"]["msg"].value;
+	
+	
+	///validation form//
+	if(name==""){
+		
+		document.getElementById('fname').innerHTML="tellme your name";
+		}
+		else if(name.length<3){
+		
+		document.getElementById('fname').innerHTML="must 3 disit";
+		}
+		else{
+		
+		document.getElementById('fname').innerHTML=" ";
+		}
+		if(gender==""){
+		
+		document.getElementById('gender').innerHTML="tellme your gender";
+		}
+		else{
+		
+		document.getElementById('gender').innerHTML=" ";
+		}
+		if(!document.forms["form"].bbs.checked && document.forms["form"].java.checked){
+		
+		document.getElementById('education').innerHTML="tellme your education";
+		}
+		else{
+		
+		document.getElementById('education').innerHTML=" ";
+		}
+		if(round==""){
+		
+		document.getElementById('round').innerHTML="tellme your round";
+		}
+		else{
+		
+		document.getElementById('round').innerHTML=" ";
+		} 
+		if(msg==" "){
+		
+		document.getElementById('msg').innerHTML="tellme your comment";
+		}
+		else{
+		 
+		document.getElementById('mdg').innerHTML=" ";
+		
+		
+		window= window.open("","","width=300");
+		win.document.write("<h2><center>output form</center></h2>");
+		win.document.write("Name:"+name+"<br/>");
+		win.document.write("Gender:"+gender+"<br/>");
+		win.document.write("Education:"+education+"<br/>");
+		win.document.write("Round:"+ round +"<br/>");
+		win.document.write("comment:"+ msg +"<br/>");
+		}
+	
+	
+	
+	
+	}
+
+
+
+
+
+</script>
+</body>
+</html>
