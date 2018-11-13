@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body><form action="" method="get" name="form">
+
+Name:<input name="fname" type="text">
+<label id="fnamex"></label><br>
+Email:<input name="email" type="text">
+<label id="email"></label><br>
+Round:
+<select>
+<option>Round 38</option>
+<option>Round 39</option>
+<option>Round 40</option>
+</select>
+<label id="round"></label><br>
+Massage:
+<textarea name="msg" cols="20" rows="6"></textarea>
+<label id="msg"></label><br>
+
+
+
+
+
+
+</form>
+<input name="submit" type="submit"onClick="validateFoum()"/>
+<script>
+///name//
+		var win;
+		function closeWindow(){
+			
+			win.close();
+			
+			}
+			var fname=document.forms["form"]["fname"].value;
+			var email=document.forms["form"]["email"].value;
+			var round=document.forms["form"]["round"].value;
+			var msg=document.forms["form"]["msg"].value;
+			//validate form//
+			
+			
+			if(fname=""){
+				document.getElementById('fnamex').innerHTML="till me you name";
+				return false;
+				
+			
+				}
+				else{
+					document.getElementById('fnamex').innerHTML="";
+					}
+					
+			if(email=""){
+				document.getElementById('email').innerHTML="till me you email";
+			
+				 return false;
+				else{
+					document.getElementById('email').innerHTML="";
+					}
+				if(round=""){
+				document.getElementById('round').innerHTML="till me you round";
+				return false;
+				}
+				
+				else{
+					document.getElementById('round').innerHTML="";
+					}
+				if(msg=""){
+				document.getElementById('msg').innerHTML="till me you name";
+				return false;
+				}
+				
+				else{
+					document.getElementById('msg').innerHTML=" ";
+					
+					
+					window=window.open("","","width=300");
+					win.document.write("<h2><center></center></h2>");
+					win.document.write("Nane:"+fname+"<br>");
+					win.document.write("Nane:"+email+"<br>");
+					win.document.write("Nane:"+round+"<br>");
+					win.document.write("massate:"+msg+"<br>");
+					}
+					
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
