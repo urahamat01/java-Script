@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+label{
+	color:red;
+	padding:3px 10px;
+	
+	}
+
+</style>
+</head>
+
+<body>
+<form name="myForm">
+Name:<input name="aname" type="text"><label id="anamew"></label><br>
+Round:<input name="round" type="text"><label id="round"></label><br>
+email:<input name="email" type="text"><label id="email"></label><br>
+
+
+</form>
+<button onClick="validateForm()">Submit</button>
+<button onClick="CloseWindow()">Close</button>
+<script>
+	var win;
+	function CloseWindow(){
+		
+		win.close();
+		
+		}
+		function validateForm(){
+			
+			var aname = document.forms["myForm"]["aname"].value;
+			var round = document.forms["myForm"]["round"].value;
+			var email = document.forms["myForm"]["email"].value;
+			
+			
+			
+			
+			if(aname==""){
+				
+				document.getElementById('anamew').innerHTML="tell me your name";
+				return false;
+				
+				} else if(aname.length<3){
+					
+					document.getElementById('anamew').innerHTML="tell me your 3";
+					return false;
+					
+					}
+				else{
+					document.getElementById('anamew').innerHTML="";	
+					
+				}
+				if(round==""){
+					document.getElementById('round').innerHTML="tell me your round";
+					return false;
+					
+					}else{
+					document.getElementById('round').innerHTML=" ";
+						
+						}
+						if(email==""){
+					document.getElementById('email').innerHTML="tell me your email";
+					
+							return false;
+					
+					}else{
+						document.getElementById('email').innerHTML="";
+					}
+						
+						
+				win.document.open("","","width=300");
+				win.document.write("<h2><center>output</center></h2><hr>");
+				win.document.write("Name:"+aname+"<br>");
+				win.document.write("Round:"+round+"<br>");
+				win.document.write("Round:"+email+"<br>");
+				
+			
+					
+			
+			
+			}
+
+
+
+</script>
+</body>
+</html>

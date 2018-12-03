@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form name="myForm">
+ID:
+  
+  <input type="text" name="id" id="id"><label id="id"></label><br>
+  Name:<input name="fname" type="text"><label id="fnamex"></label><br>
+  Email:<input name="email" type="text"><label id="email"></label><br>
+  Gender:
+  <input name="gender" type="radio"value="femail"checked="checked">Femail
+   <input name="gender" type="radio"value="mail">Mail
+  
+  
+  <label id="gender"></label><br>
+  Round:
+  <select name="round">
+  <option value="round 39"> Round 39</option>
+  <option value="round 38"> Round 38</option>
+  <option value="round 40"> Round 40</option>
+  
+  
+  </select>
+  <label id="round"></label><br>
+  
+  <button>Reset</button>
+</form>
+<button onClick="validateForm()">DISPLAY</button>
+
+<script>
+var win;
+function closeWindow(){
+	
+	win.close();
+	
+	}
+	
+	function validateForm(){
+		
+		var id=document.forms["myForm"]["id"].value;
+		var fname=document.forms["myForm"]["fneme"].value;
+		var email=document.forms["myForm"]["email"].value;
+		var gender=document.forms["myForm"]["gender"].value;
+		var round=document.forms["myForm"]["round"].value;
+		
+		
+		if(id==""){
+			document.getElementById('id').innerHTML="tell me your id";
+			return false;
+			}
+			else if(id.length<3){
+				
+				document.getElementById('id').innerHTML="tell me 3";
+				return false;
+				}else{
+					document.getElementById('id').innerHTML="";
+					
+					}
+					if(fname==""){
+						
+						document.getElementById('fname').innerHTML="tell me your name";
+						return false;
+						}else{
+							document.getElementById('fname').innerHTML="";
+						}if(email==""){
+								
+								document.getElementById('email').innerHTML="tell me your email";
+						return false;
+								}else{
+							document.getElementById('email').innerHTML="";
+								}if(gender==""){
+								
+								document.getElementById('gender').innerHTML="tell me your gender";
+						return false;
+								}else{
+							document.getElementById('gender').innerHTML="";
+								}if(round==""){
+								
+								document.getElementById('round').innerHTML="tell me your email";
+						return false;
+								}else{
+							document.getElementById('round').innerHTML="";
+							
+							
+							
+							win=window.open("","","width=300");
+							win.document.write("<h2><center>output form</center></h2>");
+							win.document.write("ID:"+id+"<br>");
+							win.document.write("Name:"+fname+"<br>");
+							win.document.write("Name:"+email+"<br>");
+							win.document.write("Name:"+gender+"<br>");
+							win.document.write("Name:"+round+"<br>");
+							
+							
+							
+							}
+		
+		
+		}
+
+
+
+
+
+</script>
+</body>
+</html>

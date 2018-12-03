@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+label{
+	color:red;
+	padding:3px 10px;
+	}
+</style>
+</head>
+
+<body>
+<form action="" method="get" name="myForm" >
+	Name:<input name="aname" type="text"><label id="lname"></label></br>
+    Email:<input name="email" type="text"><label id="email"></label></br>
+    Round:
+    <select name="round">
+    <option value="Select A Round" selected="selected">Select A Round</option>
+     <option>Round 38</option>
+    <option value="round 39">Round 39</option>
+     <option value="round 40">Round 40</option>
+      <option value="round 37">Round 37</option>
+       <option value="round 36">Round 36</option>
+    </select><label id="round"></label></br>
+    Education:
+    <input name="ssc" type="checkbox" value="ssc"/>ssc
+    <input name="hsc" type="checkbox" value="hsc"/>hsc
+    <label id="education"></label></br>
+    Gender:
+    <input name="gender" type="radio" value="femail">Femail
+    <input name="gender" type="radio" value="mail">Mail
+    <label id="gender"></label></br>
+    
+   
+
+</form>
+<button onClick="vaildateForm()">Submit</button>
+<button onClick="closeWindow()">Resut</button>
+
+
+<script>
+				var win;
+				function closeWindow(){
+					win.close();
+					}
+					
+					function vaildateForm(){
+						var aname = document.forms["myForm"]["aname"].value;
+						var email = document.forms["myForm"]["email"].value;
+						var round = document.forms["myForm"]["round"].value;
+						var education = "";
+
+                if (document.forms["myForm"].ssc.checked) {
+                    education += document.forms["myForm"]["ssc"].value;
+                }
+
+                if (document.forms["myForm"].hsc.checked) {
+                    education += ", " + document.forms["myForm"]["hsc"].value;
+                }
+				var gender = document.forms["myForm"]["gender"].value;
+						
+						
+						
+						
+						
+						if(aname==""){
+							
+							document.getElementById('lname').innerHTML="name your";
+							return false;
+							
+							}else if(aname.length<3){
+								
+								document.getElementById('lname').innerHTML="name length 3";
+								return false;
+								}else{
+									
+									document.getElementById('lname').innerHTML="";
+									}if(email==""){
+										document.getElementById('email').innerHTML="email write";
+										return false;
+										
+										}else{
+											var atpost = email.indexOf("@");
+											var dotpost = email.lastIndexOf(".");
+											if(atpost<1 || dotpost<atpost+2 || dotpost+2>=email.length ){
+												document.getElementById('email').innerHTML="valid your email";
+												return false;
+											  }else{
+													
+													document.getElementById('email').innerHTML="";
+											  }
+													}if(round=="Select A Round")
+													{
+														document.getElementById('round').innerHTML="name round";
+							return false;
+							
+							}else{
+									
+									document.getElementById('round').innerHTML="";
+									}
+									if(!document.forms["myForm"].ssc.checked && !document.forms["myForm"].hsc.checked){
+										
+										document.getElementById('education').innerHTML="tell me your education";
+										return false;
+										}else{
+											
+											document.getElementById('education').innerHTML="";
+											}if(gender==""){
+												
+												document.getElementById('gender').innerHTML="tell me your gender";
+												return false;
+												}else{
+													document.getElementById('gender').innerHTML="";
+													
+													}
+											
+											
+											
+									
+											win=window.open("","","width=400");
+											win.document.write("<h2><center>form output</center></h2>");
+											win.document.write("Name:"+aname+"<br>");
+											win.document.write("Email:"+email+"<br>");
+											win.document.write("Round:"+round+"<br>");
+											win.document.write("Education:"+education+"<br>");
+											win.document.write("Gender:"+gender+"<br>");
+											
+						
+						
+						
+						
+						
+						}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<script>
+//var num = parseInt(prompt("emtert number"));
+function isPrime(num){
+	
+	for(i=2; i<num;i++)
+	if(num%i===0)
+	return false;
+	
+	return num !==0 && num !==1;
+	}
+	//alert(num);
+	
+	var sn = parseInt(prompt("first number"));
+	var en = parseInt(prompt("end number"));
+	function printPrime(sn,en){
+		
+		for(sn;sn<en;sn++){
+			
+			if(isPrime(sn)){
+				document.write(sn+","+"<br>");
+				
+				}
+				
+			}
+		
+		}
+		printPrime(sn,en);
+	
+</script>
+</body>
+</html>
